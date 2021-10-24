@@ -24,20 +24,27 @@ fn main() {
         ],
     );
 
-    println!("{:?}", graph);
-    graph.remove_edge(0, 11);
-    println!("{:?}", graph);
-    graph.remove_edge(11, 0);
-    println!("{:?}", graph);
-    graph.remove_edges(0, 7);
-    println!("{:?}", graph);
-    graph.add_edge(0, 11);
-    graph.add_undirected_edge(7, 0);
-    graph.add_undirected_edge(7, 0);
-    println!("{:?}", graph);
-    println!("{:?}", graph.is_empty());
-    graph.clear_graph();
-    println!("{:?}", graph);
-    graph.kill_graph();
-    println!("{:?}", graph.is_empty());
+    let mut graph2 = Unweighted::new_undirected(128, &[]);
+    println!("{:?}", graph2);
+    graph2.ring_graph(2);
+    println!("{:?}", graph2);
+
+    let x = Unweighted::infected(10, 0.15);
+    println!("{}", x);
+    // println!("{:?}", graph);
+    // graph.remove_edge(0, 11);
+    // println!("{:?}", graph);
+    // graph.remove_edge(11, 0);
+    // println!("{:?}", graph);
+    // graph.remove_edges(0, 7);
+    // println!("{:?}", graph);
+    // graph.add_edge(0, 11);
+    // graph.add_undirected_edge(7, 0);
+    // graph.add_undirected_edge(7, 0);
+    // println!("{:?}", graph);
+    // println!("{:?}", graph.is_empty());
+    // graph.clear_graph();
+    // println!("{:?}", graph);
+    // graph.kill_graph();
+    // println!("{:?}", graph.is_empty());
 }
