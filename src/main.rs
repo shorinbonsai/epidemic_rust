@@ -28,9 +28,9 @@ fn main() {
     println!("{:?}", graph2);
     graph2.ring_graph(2);
     println!("{:?}", graph2);
+    let combo = graph2.SIR(0, 0.5);
+    println!("{:?}", combo);
 
-    let x = Unweighted::infected(10, 0.15);
-    println!("{}", x);
     // println!("{:?}", graph);
     // graph.remove_edge(0, 11);
     // println!("{:?}", graph);
