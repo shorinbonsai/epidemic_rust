@@ -28,7 +28,7 @@ fn main() {
     println!("{:?}", graph2);
     graph2.ring_graph(2);
     println!("{:?}", graph2);
-    let combo = graph2.SIR(0, 0.5);
+    let combo = graph2.SIR(0, 0.50);
     println!("{:?}", combo);
 
     // println!("{:?}", graph);
